@@ -1,0 +1,65 @@
+30/03/23
+
+1)Implemente a navegação de pelo menos 10 widgets do SEU projeto. 
+ - Lembre-se que o projeto deve ser único, relevante e coerente - deve estar validada pelo professor!
+ - De prioridade na lógica de navegação e no sentido dos widgets - por enquanto não precisa "desenhar" completamente;
+ - Se der tempo, vai tentando implementar e caso não consiga, faça a prototipação por meio de outro recurso (pode ser no caderno).
+
+2)Em flutter, o que é rotas (Route)? Para que serve?
+R: rotas referem-se a uma forma de navegar entre diferentes telas ou páginas em um aplicativo, serve para permitir a navegação pelos diversos widgets do seu projeto.
+
+3)Para definir uma rota (Route) é necessário utilizar qual classe? O construtor requer parâmetro (se sim, indique o tipo e objetivo)?
+R: é necessário utilizar a classe MaterialPageRoute, que possui varios construtores. O construtor padrão não requer nenhum parâmetro, mas existem outros construtores que podem ser usados para fornecer informações adicionais, como o builder para construir a tela que será exibida na rota, e o settings para passar argumentos e configurações adicionais para a rota.
+
+4)Em flutter, o que é necessário para implementar uma "navegação"?
+R: A utilização de rotas e de um Navigator 
+
+5)Quais são os principais métodos de navegação? Explique detalhadamente a assinatura do método.
+R: Navigator.push para empilhar uma nova rota na parte superior da pilha de rotas 
+Navigator.pop para remover a rota superior da pilha. 
+Navigator.pushReplacement para substituir a rota atual por uma nova rota.
+Navigator.popAndPushNamed remove a rota atual da pilha de rotas e adiciona uma nova rota à pilha e exibe imediatamente. Isso significa que, quando o usuário pressiona o botão voltar, ele retorna diretamente para a rota anterior à substituída.
+
+6)O "context" é necessário para realizar uma das operações do Navigator. Neste contexto, qual é o seu tipo e para por qual motivo ele é necessário?
+R: O BuildContext é necessário para a navegação com o Navigator em Flutter porque o Navigator é um widget que faz parte da árvore de widgets e usa o BuildContext para localizar o objeto NavigatorState. O BuildContext fornece informações importantes sobre o ambiente em que um widget está sendo construído, incluindo sua posição na árvore de widgets e a pilha de rotas atual.
+
+7)Exemplifique (sem copiar e colar) o uso de Navigator com e sem a referência anônima. Na sua opinião: qual a diferença? qual é a mais fácil? é possível entender as duas?
+--Anonima
+Navigator.push(
+  context,
+  MaterialPageRoute(
+    builder: (context) => MyNextScreen(),
+  ),
+);
+
+--Não Anonima
+Navigator.of(context).push(
+  MaterialPageRoute(
+    builder: (context) => MyNextScreen(),
+  ),
+);
+--O primeiro usa a referência anônima para chamar o método push diretamente no Navigator, enquanto o segundo usa a referência do Navigator obtida a partir do BuildContext com o método of.
+
+
+8)Qual a diferença entre push e pushReplacedNamed? Em que caso utilizamos cada uma?
+R: A diferença entre eles já foi explicada na questão 5
+O push é usado quando você deseja adicionar uma nova tela à pilha de rotas e permitir que o usuário volte à tela anterior por meio do botão de voltar. Isso é útil quando você tem um fluxo de navegação que permite que o usuário navegue para frente e para trás entre as telas.
+O pushReplacementNamed é usado quando você deseja substituir a tela atual por uma nova tela na pilha de rotas. Isso é útil quando você não deseja que o usuário volte à tela anterior e deseja que ele veja apenas a nova tela.
+
+9)Qual a diferença entre pop e popAndPushNamed? Em que caso utilizamos cada uma?
+R: A diferença entre eles já foi explicada na questão 5
+O pop é usado quando você deseja remover a tela atual da pilha de rotas e retornar à tela anterior. Isso é útil quando você tem um fluxo de navegação que permite que o usuário volte à tela anterior.
+O popAndPushNamed é usado quando você deseja remover a tela atual da pilha de rotas e adicionar uma nova tela à pilha de rotas e exibi-la imediatamente. Isso é útil quando você deseja substituir a tela atual por uma nova tela e não deseja que o usuário volte à tela anterior.
+
+10)O que são e para que servem as rotas nomeadas?
+As rotas nomeadas são uma maneira de criar uma rota com um nome identificador em vez de apenas uma referência de objeto, permitindo que você navegue entre telas de maneira mais fácil e clara 
+
+11) Em relação as rotas, deste as formas apresentadas, qual seria a melhor? Justifique.
+As rotas nomeadas serão sempre a melhor escolha, pois elas possibilitam melhor CLAREZA, desencadeando melhor manutenção, reutilização e facilidade de navegação 
+
+12) Em relação ao push e pashNamed: qual a diferença? os parametros são posicionais ou nomeados?
+O método push recebe uma instância da classe PageRoute como argumento posicional. Você precisa criar uma instância de PageRoute explicitamente e definir a rota que será empurrada na pilha de navegação.
+Já o método pushNamed recebe o nome da rota como argumento posicional e usa a tabela de rotas do MaterialApp para construir uma nova instância da rota correspondente.
+
+13) REALIZAR ATIVIDADES QUE CONSTA EM: layout/lib/tela/primeira_pagina.dart
+
