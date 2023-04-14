@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
-import 'arnold.dart';
-import 'kevinLevrone.dart';
-import 'ronnieColeman.dart';
-import 'tomPlatz.dart';
-import 'jayCutler.dart';
+import 'package:projeto01/popcorn.dart';
+import 'package:projeto01/signup.dart';
+import 'movie.dart';
+import 'rotas.dart';
+import 'session.dart';
+import 'add.dart';
+import 'login.dart';
+import 'package:flutter/widgets.dart';
 
 void main() {
   runApp(MyApp());
@@ -17,6 +20,16 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
+       routes: {
+        '/': (context) => Index(),
+        Rotas.login: (context) => Login(),
+        Rotas.add: (context) => Add(),
+        Rotas.movie: (context) => Movie(),
+        Rotas.popcorn: (context) => Popcorn(),
+        Rotas.session: (context) => Session(),
+        Rotas.signup: (context) => Signup(),
+      
+      },
       home: FirstPage(),
     );
   }
@@ -30,42 +43,17 @@ class FirstPage extends StatelessWidget {
           title: Text('First Page'),
         ),
         body: Center(
-            child: Row(children: [
+            child: Row(
+              children: [
+          Image.asset('assets/images/welcome.png'),
           ElevatedButton(
-            child: Text('Jay Cutler Page'),
+            child: Text('Login'),
             onPressed: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => JayCutler()));
+              Navigator.pushReplacement(context,
+                  MaterialPageRoute(builder: (context) => Login()));
             },
           ),
-          ElevatedButton(
-            child: Text('Ronnie Coleman Page'),
-            onPressed: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => RonnieColeman()));
-            },
-          ),
-          ElevatedButton(
-            child: Text('Kevin Levrone Page'),
-            onPressed: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => KevinLevrone()));
-            },
-          ),
-          ElevatedButton(
-            child: Text('Arnold Page'),
-            onPressed: () {
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => Arnold()));
-            },
-          ),
-          ElevatedButton(
-            child: Text('Tom Platz Page'),
-            onPressed: () {
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => TomPlatz()));
-            },
-          ),
+      
         ])));
   }
 }
