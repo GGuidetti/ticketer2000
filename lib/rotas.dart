@@ -10,5 +10,8 @@ class Rotas {
   static const add = 'add';
   static const popcorn = 'popcorn';
   static const session = 'session';
+  static const seat = 'seat';
+  static const payment = 'payment';
+  static const soda = 'soda';
 }
 

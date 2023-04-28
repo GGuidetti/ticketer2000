@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:projeto01/movie.dart';
 import 'package:projeto01/rotas.dart';
+import 'package:projeto01/signup.dart';
 
 class Login extends StatelessWidget {
   @override

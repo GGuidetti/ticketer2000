@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:projeto01/payment.dart';
 import 'package:projeto01/popcorn.dart';
+import 'package:projeto01/seat.dart';
 import 'package:projeto01/signup.dart';
+import 'package:projeto01/soda.dart';
 import 'movie.dart';
 import 'rotas.dart';
 import 'session.dart';
@@ -21,13 +24,15 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
        routes: {
-        '/': (context) => Index(),
         Rotas.login: (context) => Login(),
         Rotas.add: (context) => Add(),
         Rotas.movie: (context) => Movie(),
         Rotas.popcorn: (context) => Popcorn(),
         Rotas.session: (context) => Session(),
         Rotas.signup: (context) => Signup(),
+        Rotas.seat: (context) => Seat(),
+        Rotas.payment: (context) => Payment(),
+        Rotas.soda: (context) => Soda(),
       
       },
       home: FirstPage(),

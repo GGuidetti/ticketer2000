@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:projeto01/login.dart';
 
-class Popcorn extends StatelessWidget {
+class Soda extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -10,7 +10,7 @@ class Popcorn extends StatelessWidget {
         ),
         body: Center(
             child: Row(children: [
-          Image.asset('assets/images/popcorn.png')
+          Image.asset('assets/images/soda.png')
         ])));
   }
 }
