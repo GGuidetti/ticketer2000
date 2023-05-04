@@ -44,18 +44,60 @@ class FirstPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+       backgroundColor: const Color.fromARGB(255, 95, 6, 0),
         appBar: AppBar(
-          title: Text('First Page'),
+          title: Text('Home'),
+          backgroundColor: Color.fromARGB(255, 241, 160, 10),
         ),
         body: Center(
-            child: Row(
+            child: Column(
               children: [
-          Image.asset('assets/images/welcome.png'),
+                SizedBox(
+            height: 100,
+          ),
+                 Text(
+            'Bem vindo ao Ticketer 2000!',
+            style: TextStyle(
+              fontSize: 40,
+              foreground: Paint()
+                ..style = PaintingStyle.stroke
+                ..strokeWidth = 2
+                ..color = Color.fromARGB(255, 241, 160, 10),
+            ),
+          ),
+          SizedBox(
+            height: 30,
+          ),
+           Text(
+            'A sua plataforma de ingressos online!',
+            style: TextStyle(
+              fontSize: 20,
+              foreground: Paint()
+                ..color = Color.fromARGB(255, 241, 160, 10),
+            ),
+          ),
+          SizedBox(
+            height: 100,
+          ),
           ElevatedButton(
             child: Text('Login'),
+             style: ElevatedButton.styleFrom(
+              backgroundColor: Color.fromARGB(255, 241, 160, 10),
+            ),
             onPressed: () {
               Navigator.pushReplacement(context,
                   MaterialPageRoute(builder: (context) => Login()));
+            },
+          ),
+          SizedBox(height: 50,),
+          ElevatedButton(
+            child: Text('Cadastre-se'),
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Color.fromARGB(255, 241, 160, 10),
+            ),
+            onPressed: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => Signup()));
             },
           ),
       
