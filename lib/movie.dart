@@ -42,14 +42,6 @@ class Movie extends StatelessWidget {
                       SizedBox(
             height: 50,
           ),
-                     
-          ElevatedButton(
-            child: Text('horarios'),
-            onPressed: () {
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => Session()));
-            },
-          ),
         ])));
   }
 }
