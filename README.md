@@ -20,3 +20,6 @@ samples, guidance on mobile development, and a full API reference.
 
 Na aula do dia 09/05 nós utilizamos os widgets que eu já havia visto durante as aulas anteriores (Form, Column, Row, ElevatedButton, FormField, Scaffold, etc). Porém o professor apresentou elementos novos também, alguns que eu ainda não conhecia, como o Snackbar e a função Validate, que serão uteís para o meu projeto, já estou pensando onde irei utilizá-los
 
+## Diário 11/05
+
+Hoje o professor começou a introduzir a idéia de banco de dados na matéria. Devido a isso aprendemos a fazer um DTO e sua necessidade para os softwares, que no caso é padronizar a linguagem de tranferencia de dados entre projeto > banco e banco > projeto. Eu particularmente já estou familizarizado com a idéia, pois vejo diariamente o assundo no meu trabalho, mas mesmo assim achei muito didático a maneira como o professor apresentou o conteúdo pra turma, deu até pra relembrar alguns conceitos teoricos a respeito do assunto
